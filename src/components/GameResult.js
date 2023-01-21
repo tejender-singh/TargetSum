@@ -16,7 +16,7 @@ const GameResult = (props) => {
       ? "You Lost"
       : "";
   return (
-    <Card sx={{ minWidth: 275 }}>
+    <Card variant="outlined" sx={{ minWidth: 275 }}>
       <CardContent>
         <Typography
           variant="h5"
@@ -32,7 +32,11 @@ const GameResult = (props) => {
         </Typography>
       </CardContent>
       <CardActions style={{ justifyContent: "center" }}>
-        <Button size="medium" onClick={() => props.onPlayAgain()}>
+        <Button
+          size="medium"
+          variant="outlined"
+          onClick={() => props.onPlayAgain()}
+        >
           Play Again
         </Button>
       </CardActions>
