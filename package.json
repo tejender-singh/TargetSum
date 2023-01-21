@@ -6,7 +6,8 @@
   "scripts": {
     "dev:server": "nodemon --exec babel-node src/server/server.js --ignore dist/",
     "dev:bundler": "webpack -w --mode=development",
-    "start": "webpack --mode=development && nodemon --exec babel-node src/server/server.js --ignore dist/",
+    "dev2:bundler": "webpack --mode=development",
+    "start": "webpack --mode=development && babel-node src/server/server.js --ignore dist/",
     "test": "jest"
   },
   "repository": {
