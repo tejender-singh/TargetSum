@@ -15,7 +15,7 @@ export default function App() {
 
   return (
     <>
-      <Container maxWidth="sm">
+      <Container maxWidth="sm" sx={{ marginBottom: 10 }}>
         <Typography variant="h6" component="div">
           Choose any four numbers that sum to the target number
         </Typography>
@@ -27,6 +27,7 @@ export default function App() {
           left: 10,
           bottom: 0,
           right: 10,
+          backgroundColor: ColorUtils.white,
         }}
       >
         <p

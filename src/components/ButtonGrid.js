@@ -3,7 +3,7 @@ import ButtonCard from "./ButtonCard";
 
 const ButtonGrid = (props) => {
   return (
-    <Grid container spacing={4}>
+    <Grid container spacing={2}>
       {props.candidateNumbers.map((number, index) => {
         return (
           <Grid key={"Key" + index} item xs={6}>
