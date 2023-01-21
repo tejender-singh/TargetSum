@@ -2,11 +2,11 @@
   "name": "targetsum",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "dev:server": "nodemon --exec babel-node src/server/server.js --ignore dist/",
     "dev:bundler": "webpack -w --mode=development",
-    "dev2:bundler": "babel -d ./build ./src -s",
+    "dev2:bundler": "webpack --mode=development",
     "start": "webpack --mode=development && babel-node src/server/server.js --ignore dist/",
     "test": "jest"
   },
@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/tejender-singh/TargetSum#readme",
   "dependencies": {
-    "@babel/cli": "^7.20.7",
     "@babel/core": "^7.20.12",
     "@babel/node": "^7.20.7",
     "@babel/preset-env": "^7.20.2",
