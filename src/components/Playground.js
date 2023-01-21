@@ -72,7 +72,7 @@ const Playground = (props) => {
       </Typography>
       <div
         style={{
-          paddingTop: 40,
+          paddingTop: 10,
           textAlign: "center",
         }}
       >
