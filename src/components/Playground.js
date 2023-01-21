@@ -7,12 +7,15 @@ import {
   getSumOfRandomNumbersInArray,
 } from "../utils/MathUtil";
 import GameResult from "./GameResult";
+import { Typography } from "@mui/material";
+import ColorUtils from "../utils/ColorUtils";
 
 const Playground = (props) => {
   const [arr, setArr] = useState([]);
   const [targetSum, setTargetSum] = useState(0);
   const [gameState, setGameState] = useState(GameState.active);
   const [clickedNumbers, setClickedNumbers] = useState([]);
+  const [timeRemaining, setTimeRemaining] = useState(15);
 
   useEffect(() => {
     const newArr = Array.from({ length: 6 }).map(() =>
@@ -21,6 +24,16 @@ const Playground = (props) => {
     setArr(newArr);
     setTargetSum(getSumOfRandomNumbersInArray(newArr, 4));
   }, []);
+
+  useEffect(() => {
+    if (timeRemaining > 0) {
+      setTimeout(() => {
+        if (gameState === GameState.active) setTimeRemaining(timeRemaining - 1);
+      }, 1000);
+    } else {
+      setGameState(GameState.lost);
+    }
+  }, [timeRemaining]);
 
   const sum = clickedNumbers.reduce((prev, current) => prev + current, 0);
   if (clickedNumbers.length === 4 && gameState === GameState.active) {
@@ -51,6 +64,12 @@ const Playground = (props) => {
           candidateNumbers={arr}
         />
       </div>
+      <Typography
+        variant="h5"
+        sx={{ color: timeRemaining > 5 ? ColorUtils.black : ColorUtils.red }}
+      >
+        Time Remaining: {timeRemaining}
+      </Typography>
       <div
         style={{
           paddingTop: 40,

@@ -4,13 +4,14 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
 import ColorUtils from "../utils/ColorUtils";
+import GameState from "../utils/GameState";
 
 const ButtonCard = (props) => {
   const [disabled, setDisabled] = useState(false);
   const [color, setColor] = useState(ColorUtils.darkBlue);
   const [bgcolor, setBgColor] = useState(ColorUtils.white);
   const handleClick = () => {
-    if (!disabled) {
+    if (!disabled && props.gameState === GameState.active) {
       props.onClick(props.number);
       setDisabled(true);
       setColor(ColorUtils.gray);

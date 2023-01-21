@@ -7,7 +7,11 @@ const ButtonGrid = (props) => {
       {props.candidateNumbers.map((number, index) => {
         return (
           <Grid key={"Key" + index} item xs={6}>
-            <ButtonCard number={number} onClick={props.buttonClick} />
+            <ButtonCard
+              gameState={props.gameState}
+              number={number}
+              onClick={props.buttonClick}
+            />
           </Grid>
         );
       })}
