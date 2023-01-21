@@ -66,7 +66,10 @@ const Playground = (props) => {
       </div>
       <Typography
         variant="h5"
-        sx={{ color: timeRemaining > 5 ? ColorUtils.black : ColorUtils.red }}
+        sx={{
+          color: timeRemaining > 5 ? ColorUtils.black : ColorUtils.red,
+          paddingTop: "1vh",
+        }}
       >
         Time Remaining: {timeRemaining}
       </Typography>

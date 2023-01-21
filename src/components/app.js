@@ -16,7 +16,7 @@ export default function App() {
   return (
     <>
       <Container maxWidth="sm" sx={{ marginBottom: 10 }}>
-        <Typography variant="h6" component="div">
+        <Typography fontSize={"2vh"} variant="h6" component="div">
           Choose any four numbers that sum to the target number
         </Typography>
         <Playground key={gameId} onPlayAgain={resetGame} />
@@ -26,6 +26,7 @@ export default function App() {
           position: "fixed",
           left: 10,
           bottom: 0,
+          fontSize: "2vh",
           right: 10,
           backgroundColor: ColorUtils.white,
         }}
@@ -40,8 +41,9 @@ export default function App() {
           Code for this project is available at{" "}
           <IconButton aria-label="delete">
             <GitHubIcon
-              fontSize="large"
-              sx={{ color: ColorUtils.black }}
+              // fontSize="large"
+
+              sx={{ color: ColorUtils.black, fontSize: "2vh" }}
               onClick={() =>
                 openLink("https://github.com/tejender-singh/TargetSum")
               }

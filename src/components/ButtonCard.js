@@ -21,10 +21,16 @@ const ButtonCard = (props) => {
 
   return (
     <Box style={{}} sx={{ textAlign: "-webkit-center" }} onClick={handleClick}>
-      <Card variant="outlined" sx={{ bgcolor }}>
+      <Card variant="outlined" sx={{ bgcolor, minHeight: "7vh" }}>
         <>
           <CardContent>
-            <Typography variant="h4" component="div" color={color}>
+            <Typography
+              variant="h4"
+              component="div"
+              fontSize={"3vh"}
+              sx={{ padding: "2vh" }}
+              color={color}
+            >
               {props.number}
             </Typography>
           </CardContent>

@@ -1,10 +1,4 @@
-import {
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  Typography,
-} from "@mui/material";
+import { Button, Card, CardContent, Typography } from "@mui/material";
 import ColorUtils from "../utils/ColorUtils";
 import GameState from "../utils/GameState";
 
@@ -20,6 +14,7 @@ const GameResult = (props) => {
       <CardContent>
         <Typography
           variant="h5"
+          fontSize={"4vh"}
           color={
             props.gameState === GameState.won
               ? ColorUtils.green
@@ -31,15 +26,16 @@ const GameResult = (props) => {
           {message}
         </Typography>
       </CardContent>
-      <CardActions style={{ justifyContent: "center" }}>
-        <Button
-          size="medium"
-          variant="outlined"
-          onClick={() => props.onPlayAgain()}
-        >
-          Play Again
-        </Button>
-      </CardActions>
+      <Button
+        size="medium"
+        variant="outlined"
+        sx={{
+          height: "4vh",
+        }}
+        onClick={() => props.onPlayAgain()}
+      >
+        Play Again
+      </Button>
     </Card>
   );
 };

@@ -21,10 +21,17 @@ const TargetCard = (props) => {
 
   return (
     <Box sx={{ textAlign: "-webkit-center" }}>
-      <Card variant="outlined" sx={{ color, bgcolor }}>
+      <Card variant="outlined" sx={{ color, bgcolor, minHeight: "13vh" }}>
         <>
           <CardContent>
-            <Typography variant="h2" component="div">
+            <Typography
+              variant="h2"
+              fontSize={"5vh"}
+              sx={{
+                padding: "4vh",
+              }}
+              component="div"
+            >
               {props.text}
             </Typography>
           </CardContent>
