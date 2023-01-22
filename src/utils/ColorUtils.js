@@ -4,7 +4,7 @@ const ColorUtils = {
   white: "#FFF",
   black: "#000",
   darkBlue: "#1A1B41",
-  lightBlur: "#57C4E5",
+  lightBlue: "#57C4E5",
   gray: "gray",
   lightGray: "#ccc",
 };

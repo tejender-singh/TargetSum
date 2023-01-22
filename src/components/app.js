@@ -39,15 +39,13 @@ export default function App() {
           }}
         >
           Code for this project is available at{" "}
-          <IconButton aria-label="delete">
-            <GitHubIcon
-              // fontSize="large"
-
-              sx={{ color: ColorUtils.black, fontSize: "2vh" }}
-              onClick={() =>
-                openLink("https://github.com/tejender-singh/TargetSum")
-              }
-            />
+          <IconButton
+            aria-label="github"
+            onClick={() =>
+              openLink("https://github.com/tejender-singh/TargetSum")
+            }
+          >
+            <GitHubIcon sx={{ color: ColorUtils.black, fontSize: "2vh" }} />
           </IconButton>
           . View my{" "}
           <a

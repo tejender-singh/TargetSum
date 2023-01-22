@@ -12,3 +12,6 @@ export const getSumOfRandomNumbersInArray = (array, count) => {
   }
   return sum;
 };
+
+export const getArrayOfRandomNumbersBetween = (min, max) =>
+  Array.from({ length: 6 }).map(() => randomNumberBetween(min, max));

@@ -3,7 +3,7 @@ import GameState from "../utils/GameState";
 import ButtonGrid from "./ButtonGrid";
 import TargetCard from "./TargetCard";
 import {
-  randomNumberBetween,
+  getArrayOfRandomNumbersBetween,
   getSumOfRandomNumbersInArray,
 } from "../utils/MathUtil";
 import GameResult from "./GameResult";
@@ -18,9 +18,7 @@ const Playground = (props) => {
   const [timeRemaining, setTimeRemaining] = useState(15);
 
   useEffect(() => {
-    const newArr = Array.from({ length: 6 }).map(() =>
-      randomNumberBetween(1, 25)
-    );
+    const newArr = getArrayOfRandomNumbersBetween(1, 25);
     setArr(newArr);
     setTargetSum(getSumOfRandomNumbersInArray(newArr, 4));
   }, []);
@@ -51,7 +49,6 @@ const Playground = (props) => {
 
     const newClickedNumbers = [...clickedNumbers, number];
     setClickedNumbers(newClickedNumbers);
-    console.log(number, targetSum, sum);
   };
 
   return (
